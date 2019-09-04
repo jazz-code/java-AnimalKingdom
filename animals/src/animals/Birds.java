@@ -1,22 +1,28 @@
 package animals;
 
-public class Birds implements Animal
+public class Birds extends AbstractAnimal
 {
-    private int yearDiscovered = 0;
+    private int yearDiscovered; 
     private String name;
 
-    public Birds(String name)
-    {
-        this.name = name;
+    public Birds(String name, int yearDiscovered)
+    {   
+        super(name, yearDiscovered);
     }
 
-    public String getName()
+    @Override
+    public String move()
     {
-        return name;
+        return "Flys";
     }
 
-    public void setName()
+    public String breath()
     {
-        this.name = name;
+        return "Breaths with lungs";
+    }
+
+    public String reproduces()
+    {
+        return "Reproducess with eggs";
     }
 }

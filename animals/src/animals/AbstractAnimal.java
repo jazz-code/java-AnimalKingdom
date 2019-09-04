@@ -45,7 +45,7 @@ public abstract class AbstractAnimal
         return name;
     }
 
-    public vod setYearDiscovered()
+    public void setYearDiscovered()
     {
         this.yearDiscovered = yearDiscovered;
     }

@@ -1,22 +1,28 @@
 package animals;
 
-public class Fish implements Animal
+public class Fish extends AbstractAnimal
 {
-    private int yearDiscovered = 0;
+    private int yearDiscovered; 
     private String name;
 
-    public Fish(String name)
-    {
-        this.name = name;
+    public Fish(String name, int yearDiscovered)
+    {   
+        super(name, yearDiscovered);
     }
 
-    public String getName()
+    @Override
+    public String move()
     {
-        return name;
+        return "Swims";
     }
 
-    public void setName()
+    public String breath()
     {
-        this.name = name;
+        return "Breaths with gils";
+    }
+
+    public String reproduces()
+    {
+        return "Reproducess with eggs";
     }
 }
