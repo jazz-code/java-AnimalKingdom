@@ -85,5 +85,10 @@ public class Main
         // filters List 
         printAnimals(myList, v -> v.breath().equals("Breathes with lungs"));
         System.out.println();
+
+        //List only those animals that breath with lungs and were named in 1758
+        System.out.println("***List only those animals that breath with lungs and were named in 1758***");
+        printAnimals(myList, v -> v.breath().equals("Breathes with lungs") && v.getYearDiscovered() == 1758);
+        System.out.println();
     }
 }
