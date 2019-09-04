@@ -4,6 +4,16 @@ import java.util.*;
 
 public class Main 
 {
+    public static void printAnimals(ArrayList<AbstractAnimal> animals, CheckAnimal tester)
+    {
+        for (AbstractAnimal v : animals)
+        {
+            if (tester.test(v))
+            {
+                System.out.println(v.getName());
+            }
+        }
+    }
     public static void main(String[] args)
     {
         //--Mammals---*
@@ -62,6 +72,18 @@ public class Main
         System.out.println("***List all the animals alphabetically***");
         myList.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
         myList.forEach(animal -> System.out.println(animal.getName()));
+        System.out.println();
+
+        // List all the animals order by how they move
+        System.out.println("***List all the animals order by how they move***");
+        myList.sort((v1, v2) -> v1.move().compareToIgnoreCase(v2.move()));
+        myList.forEach(animal -> System.out.println(animal.move()));
+        System.out.println();
+
+        // List only those animals the breath with lungs
+        System.out.println("***List only those animals the breath with lungs***");
+        // filters List 
+        printAnimals(myList, v -> v.breath().equals("Breathes with lungs"));
         System.out.println();
     }
 }
