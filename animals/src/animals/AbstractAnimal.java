@@ -16,6 +16,13 @@ public abstract class AbstractAnimal
     public AbstractAnimal(int food, String name, int yearDiscovered)
     {
         this.food = food;
+        this.yearDiscovered = yearDiscovered;
+        this.name = name;
+    }
+    // default contructor => AbstractAnimal with no parameters
+    public AbstractAnimal()
+    {
+        food = 1;
     }
 
     public void move(int steps)
@@ -28,5 +35,29 @@ public abstract class AbstractAnimal
         food = food + i;
     }
 
-    
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public vod setYearDiscovered()
+    {
+        this.yearDiscovered = yearDiscovered;
+    }
+
+    public int getYearDiscovered()
+    {
+        return yearDiscovered;
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
 }

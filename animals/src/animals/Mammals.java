@@ -1,22 +1,24 @@
 package animals;
 
-public class Mammals implements Animal
+public class Mammals extends AbstractAnimal
 {
-    private int yearDiscovered = 0;
-    private String name;
-
-    public Mammals(String name)
+    public String name; 
+    //constructor pulling super() from AbstractAnimal
+    public Mammals (String name, int yearDiscovered, int food)
     {
-        this.name = name;
+        super(name, yearDiscovered, food);
     }
 
-    public String getName()
+    public abstract String move()
     {
-        return name;
-    }
 
-    public void setName()
+    }
+    public abstract String breath()
     {
-        this.name = name;
+
+    }
+    public abstract String reproduce()
+    {
+
     }
 }
