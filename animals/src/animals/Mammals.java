@@ -8,17 +8,22 @@ public class Mammals extends AbstractAnimal
     {
         super(name, yearDiscovered, food);
     }
-
-    public abstract String move()
+    
+    @Override
+    public String move()
     {
-
+        return "Walks";
     }
-    public abstract String breath()
-    {
 
+    @Override
+    public String breath()
+    {
+        return "Breathes with lungs";
     }
-    public abstract String reproduce()
-    {
 
+    @Override
+    public String reproduce()
+    {
+        return "Live births";
     }
 }
