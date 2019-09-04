@@ -90,5 +90,13 @@ public class Main
         System.out.println("***List only those animals that breath with lungs and were named in 1758***");
         printAnimals(myList, v -> v.breath().equals("Breathes with lungs") && v.getYearDiscovered() == 1758);
         System.out.println();
+
+        System.out.println("***List only those animals that lay eggs and breath with lungs***");
+        printAnimals(myList, v -> v.reproduce().equals("Reproducess with eggs") && v.breath().equals("Breathes with lungs"));
+        System.out.println();
+
+        System.out.println("***List alphabetically only those animals that were named in 1758***");
+        printAnimals(myList, v -> v.getYearDiscovered() == 1758);
+        System.out.println();
     }
 }
