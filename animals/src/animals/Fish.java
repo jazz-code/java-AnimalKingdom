@@ -21,7 +21,7 @@ public class Fish extends AbstractAnimal
         return "Breaths with gils";
     }
 
-    public String reproduces()
+    public String reproduce()
     {
         return "Reproducess with eggs";
     }

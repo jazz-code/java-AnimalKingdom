@@ -4,11 +4,11 @@ public class Mammals extends AbstractAnimal
 {
     public String name; 
     //constructor pulling super() from AbstractAnimal
-    public Mammals (String name, int yearDiscovered, int food)
+    public Mammals (String name, int yearDiscovered)
     {
-        super(name, yearDiscovered, food);
+        super(name, yearDiscovered);
     }
-    
+
     @Override
     public String move()
     {

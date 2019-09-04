@@ -21,7 +21,7 @@ public class Birds extends AbstractAnimal
         return "Breaths with lungs";
     }
 
-    public String reproduces()
+    public String reproduce()
     {
         return "Reproducess with eggs";
     }

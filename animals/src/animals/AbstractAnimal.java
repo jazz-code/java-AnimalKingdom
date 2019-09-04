@@ -13,11 +13,12 @@ public abstract class AbstractAnimal
     public abstract String reproduce();
 
     //constructor
-    public AbstractAnimal(int food, String name, int yearDiscovered)
+    public AbstractAnimal(String name, int yearDiscovered)
     {
         this.food = food;
         this.yearDiscovered = yearDiscovered;
         this.name = name;
+        id = maxId++;
     }
     // default contructor => AbstractAnimal with no parameters
     public AbstractAnimal()
@@ -30,7 +31,7 @@ public abstract class AbstractAnimal
         food = food - steps;
     }
 
-    public vod eat(int i)
+    public void eat(int i)
     {
         food = food + i;
     }
@@ -45,7 +46,7 @@ public abstract class AbstractAnimal
         return name;
     }
 
-    public void setYearDiscovered()
+    public void setYearDiscovered(int yearDiscovered)
     {
         this.yearDiscovered = yearDiscovered;
     }
