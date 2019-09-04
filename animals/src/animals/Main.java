@@ -49,15 +49,19 @@ public class Main
 		myList.add(salmon);
 		myList.add(catfish);
 		myList.add(perch);
-        System.out.println("*****");
 
-        
         myList.forEach((v) -> System.out.println(v.getName()));
         
         //--List all the animals in descending order by year named--*
+        System.out.println("***Animals in descending order by year named***");
         myList.sort((v1, v2) -> v2.getYearDiscovered() - v1.getYearDiscovered());
         myList.forEach(animal -> System.out.println(animal.getName() + " " + animal.getYearDiscovered()));
-        
+        System.out.println();
+
         // List all the animals alphabetically
+        System.out.println("***List all the animals alphabetically***");
+        myList.sort((v1, v2) -> v1.getName().compareToIgnoreCase(v2.getName()));
+        myList.forEach(animal -> System.out.println(animal.getName()));
+        System.out.println();
     }
 }
